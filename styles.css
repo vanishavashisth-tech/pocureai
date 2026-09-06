@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f4f6f9; /* Standard NIC grey-blue tint */
+  --surface: #ffffff;
+  --ink: #111827;
+  --muted: #4b5563;
+  --action: #0056b3; /* Govt Hyperlink Blue */
+  --navy: #091c3f; /* Deep Header Navy */
+  --line: #d1d5db;
+  
+  --verified: #166534; /* Darker structured green */
+  --conflict: #991b1b; /* Darker structured red */
+  --review: #4338ca; 
+  --warning: #b45309; 
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f9fc;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Fix Recharts Legend spacing stripped by Tailwind preflight */
+.recharts-default-legend {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.recharts-default-legend .recharts-legend-item {
+  display: inline-flex !important;
+  align-items: center;
+  margin: 0 !important;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.field {
+  height: 42px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d8dee8;
+  background: white;
+  padding: 0 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
